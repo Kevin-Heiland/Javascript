@@ -8,17 +8,17 @@
 //     alert (ingresarNumero+ 'x'+i+ '='+resultado);
 // }
 
-function solicitarPrecio() {
+// function solicitarPrecio() {
 
-    let valorIngresado = parseInt(prompt("Ingrese el precio del producto para saber el precio final:"));
-    const ivaProducto = valorIngresado + (valorIngresado * 0.21);
-    alert("El precio del producto mas el IVA es: " + ivaProducto);
+//     let valorIngresado = parseInt(prompt("Ingrese el precio del producto para saber el precio final:"));
+//     const ivaProducto = valorIngresado + (valorIngresado * 0.21);
+//     alert("El precio del producto mas el IVA es: " + ivaProducto);
 
-}
+// }
 
-let seguirCotizando;
+// let seguirCotizando;
 
-do {
-    solicitarPrecio();
-    seguirCotizando = confirm("Desea saber otro precio?");
-} while (seguirCotizando);
+// do {
+//     solicitarPrecio();
+//     seguirCotizando = confirm("Desea saber otro precio?");
+// } while (seguirCotizando);
