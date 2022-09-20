@@ -3,7 +3,7 @@ const productos = [
     {
         id: 1,
         nombre: "Lemon pie",
-        descripcion: "El postre mas rico, si te gusta el limon. con limones seleccionados y materia prima de excelente calidad",
+        descripcion: "El postre mas rico, si te gusta el limon. con limones seleccionados y materia prima de excelente calidad.",
         precio: 2500,
         img: './images/lemon-pie.jpg',
         cantidad:1
@@ -12,7 +12,7 @@ const productos = [
     {
         id: 2,
         nombre: "cañonsito",
-        descripcion: "Hechos de hojaldre y rellenos de dulce de leche",
+        descripcion: "Hechos de hojaldre y rellenos de dulce de leche.",
         precio: 600,
         img: './images/cañonsitos1.jpg',
         cantidad:1
