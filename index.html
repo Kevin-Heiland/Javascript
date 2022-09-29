@@ -5,30 +5,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Javascript</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="./public/css/styles.css">
+    <title>Panaderia Paz</title>
 </head>
 
 <body>
     <nav class="nav">
         <h1 class="nav__titulo">Panaderia Paz</h1>
-        <h1 class="carrito">🛒</h1>
+        <button id="cesta-carrito"><i class="fas fa-shopping-cart"></i><span id="contador-carrito">0</span></button>
     </nav>
 
-    <div id="mainContent" class="main-content"></div>
+    <main id="producto-contenedor">
 
-    <footer class="footer">
-        
-        <div class="footer__derechos">
-            <h5>Derechos Reservados - Paz 2022</h5>
+    </main>
+
+    <div class="modal-contenedor">
+        <div class="modal-carrito">
+            <h3>Carrito</h3>
+            <button></button>
+            <div id="carrito-contenedor">
+
+            </div>
+            <p class="precioProducto">precio total: $ <span id="precioTotal"></span></p>
+            </p>
 
         </div>
-        
+
+    </div>
+
+
+    <footer class="footer">
+
+        <div class="footer__derechos">
+            <h5>Derechos Reservados - Paz 2022</h5>
+            
+        </div>
+
     </footer>
 
 
-    <script src="/Js/stock.js"></script>
-    <script src="/Js/index.js"></script>
+    <script src="/App.js" type="module"></script>
+    <script src="/index.js" type="module"></script>
+    <script src="./src/modal.js" type="module"></script>
+    <script src="./src/stock.js" type="module"></script>
+    <script src="./src/actualizarCarrito.js" type="module"></script>
+    <script src="./src/accionesCarrito.js" type="module"></script>
+    <script src="./src/storage.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
 
 </body>
 
