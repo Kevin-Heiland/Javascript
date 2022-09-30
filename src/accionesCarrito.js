@@ -1,5 +1,5 @@
-import { actualizarTotalesCarrito } from "./actualizarCarrito";
-import { productos } from "./stock";
+import { actualizarTotalesCarrito } from "./actualizarCarrito.js";
+import { productos } from "./stock.js";
 
 
 let carrito = [];
@@ -14,7 +14,7 @@ const validarProductoCarrito = (productoId) => {
         actualizarTotalesCarrito(carrito);
 
     } else {
-        agregarAlCarrito(productoId)
+        agregarAlCarrito(productoId);
     }
 };
 

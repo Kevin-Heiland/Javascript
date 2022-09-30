@@ -9,7 +9,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <link rel="stylesheet" href="./public/css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="public/css/styles.css">
+
     <title>Panaderia Paz</title>
 </head>
 
@@ -25,24 +27,21 @@
 
     <div class="modal-contenedor">
         <div class="modal-carrito">
-            <h3>Carrito</h3>
-            <button></button>
-            <div id="carrito-contenedor">
-
-            </div>
-            <p class="precioProducto">precio total: $ <span id="precioTotal"></span></p>
-            </p>
-
+          <h3>Carrito</h3>
+          <button id="btn-cerrar-carrito"><i class="fas fa-times-circle"></i></button>
+          <button id="limpiar-carrito">Limpiar carrito</button>
+          <div id="carrito-contenedor">
+    
+          </div>
+          <p class="precioProducto">Precio total: $<span id="precioTotal"></span></p>
         </div>
-
-    </div>
-
+      </div>
 
     <footer class="footer">
 
         <div class="footer__derechos">
             <h5>Derechos Reservados - Paz 2022</h5>
-            
+
         </div>
 
     </footer>
@@ -50,7 +49,7 @@
 
     <script src="/App.js" type="module"></script>
     <script src="/index.js" type="module"></script>
-    <script src="./src/modal.js" type="module"></script>
+    <script src="./src/modal.js"></script>
     <script src="./src/stock.js" type="module"></script>
     <script src="./src/actualizarCarrito.js" type="module"></script>
     <script src="./src/accionesCarrito.js" type="module"></script>

@@ -1,16 +1,20 @@
-import { validarProductoCarrito } from "./src/accionesCarrito";
+import { validarProductoCarrito } from "./src/accionesCarrito.js";
 
 const mostrarProductos = (productos) => {
   const contenedorProductos = document.getElementById("producto-contenedor");
 
   productos.forEach(producto => {
-    const div = document.createElement("div");
-    div.classlist.add('card');
-    div.innerHTML += `
-                    <h3>${producto.nombre}</h3>
-                              <p>${producto.descripcion}</p>
-                              <img class="img" src=${producto.img}>
-                              <b class="precio">$ ${producto.precio}</b>
+    const div = document.createElement('div');
+    div.classList.add('card');
+    div.innerHTML += `<div class="card-image">
+                      <img src=${producto.img}>
+                      <span class="card-title">${producto.nombre}</span>
+                      <a class="btn-floating halfway-fab wabes-effect waves-light red" id=boton${producto.id}><i class="material-icons">add_shopping_cart</i></a>
+                      </div>
+                      <div class="card-content">
+                      <p>${producto.descripcion}</p>
+                      <p>$${producto.precio}</p>
+                      </div>
                             `;
 
     contenedorProductos.appendChild(div);

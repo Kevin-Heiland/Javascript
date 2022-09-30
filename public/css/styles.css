@@ -205,6 +205,32 @@ select {
   outline: none;
 }
 
+#cerrar-carrito, #limpiar-carrito {
+  font-family: roboto sans-serif;
+  font-size: 1.3rem;
+  color: white;
+  border: 2px solid rgba(255, 252, 252, 0.808);
+ border-radius: 1rem;
+  padding: 1rem;
+  transition: all 600ms;
+ background-color: rgb(224, 41, 41);
+  text-shadow: 0.1em 0.2em 0.3em rgba(0, 0, 0, 0.452);
+  letter-spacing: 0.08rem;
+}
+
+#cerrar-carrito:hover, #limpiar-carrito:hover {
+  background-image: linear-gradient(
+      -60deg,
+      transparent, transparent 40%,
+      #ffffff44 40%, #ffffff44 60%,
+      transparent 60%, transparent 100%
+  );
+  background-size: 250% 140%;
+  background-repeat: no-repeat;
+  background-position-x: 150%;
+}
+
+
 /* FOOTER */
 .footer {
   border-radius: 4px;
