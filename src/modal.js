@@ -5,6 +5,7 @@ const limpiarCarrito = document.getElementById("limpiar-carrito");
 
 abrirCarrito.addEventListener('click', () => {
     modalContenedor.classList.toggle('modal-active')
+    
 });
 
 cerrarCarrito.addEventListener('click', () => {
