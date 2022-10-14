@@ -1,7 +1,10 @@
+import { eliminarProductoCarrito } from "../cart/accionesCarrito.js";
+
 const modalContenedor = document.querySelector('.modal-contenedor')
 const abrirCarrito = document.getElementById('cesta-carrito');
 const cerrarCarrito = document.getElementById('btn-cerrar-carrito');
 const limpiarCarrito = document.getElementById("limpiar-carrito");
+const modalCarrito = document.querySelector('.modal-carrito');
 
 abrirCarrito.addEventListener('click', () => {
     modalContenedor.classList.toggle('modal-active')
@@ -37,4 +40,29 @@ limpiarCarrito.addEventListener("click", () => {
             localStorage.clear();
         }
     })
+})
+
+modalCarrito.addEventListener('click', (event) => {
+    event.stopPropagation();
+    if (event.target.classList.contains('boton-eliminar')) {
+        Swal.fire({
+            title: 'Esta seguro?',
+            text: `Va a eleminar el producto`,
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Eliminar',
+            cancelButtonText: 'Cancelar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                eliminarProductoCarrito(event.target.value);
+                Swal.fire(
+                    'Eliminado!',
+                    'El producto ha sido eliminado',
+                    'success'
+                )
+            }
+        })
+    }
 })

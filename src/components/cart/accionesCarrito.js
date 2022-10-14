@@ -1,6 +1,6 @@
 import { actualizarTotalesCarrito } from "./actualizarCarrito.js";
-import { productos } from "./stock.js";
-
+import { productos } from "../../data/stock.js";
+import { obtenerCarritoStorage } from '../storage/storage.js';
 
 let carrito = [];
 
@@ -9,7 +9,7 @@ const validarProductoCarrito = (productoId) => {
     if (productoRepetido) {
         productoRepetido.cantidad++;
         const cantidadProducto = document.getElementById(`cantidad${productoRepetido.id}`)
-        cantidadProducto.innerText = `cantidad${productoRepetido.cantidad}`
+        cantidadProducto.innerText = `cantidad: ${productoRepetido.cantidad}`;
 
         actualizarTotalesCarrito(carrito);
 
@@ -51,4 +51,13 @@ const pintarCarrito = (carrito) => {
 
     });
 };
-export { validarProductoCarrito, pintarCarrito };
+
+const eliminarProductoCarrito = (productoId) => {
+    const carritoStorage = obtenerCarritoStorage();
+    const carritoActualizado = carritoStorage.filter(producto => producto.id !== Number(productoId));
+
+    actualizarTotalesCarrito(carritoActualizado);
+    pintarCarrito(carritoActualizado);
+};
+
+export { validarProductoCarrito, pintarCarrito, agregarAlCarrito, eliminarProductoCarrito};
