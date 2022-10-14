@@ -1,9 +1,11 @@
 import { validarProductoCarrito } from "./components/cart/accionesCarrito.js";
 
-const mostrarProductos = (productos) => {
+const mostrarProductos = async () => {
   const contenedorProductos = document.getElementById("producto-contenedor");
+  const response = await fetch('./src/data/stock.json');
+  const productos = await response.json();
 
-  productos.forEach(producto => {
+  productos.forEach((producto) => {
     const div = document.createElement('div');
     div.classList.add('card');
     div.innerHTML += `<div class="card-image">
@@ -18,6 +20,8 @@ const mostrarProductos = (productos) => {
                             `;
 
     contenedorProductos.appendChild(div);
+
+    mostrarProductos();
 
     const boton = document.getElementById(`boton${producto.id}`);
     boton.addEventListener('click', () => {
